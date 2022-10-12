@@ -12,7 +12,13 @@ const getElement = (selection) => {
   );
 };
 
-const formatPrice = () => {};
+const formatPrice = (price) => {
+  let formattedPrice = new Intl.NumberFormat("en-US", {
+    style: "currency",
+    currency: "USD",
+  });
+  return formattedPrice;
+};
 
 const getStorageItem = (item) => {
   let storageItem = localStorage.getItem(item);
