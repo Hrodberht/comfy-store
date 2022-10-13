@@ -5,7 +5,18 @@ const setupSearch = (store) => {
   const nameInput = getElement(".search-input");
   form.addEventListener("keyup", function () {
     const value = nameInput.value;
-    console.log(value);
+    if (value) {
+      const newStore = store.filter((product) => {
+        let { name } = product;
+        name = name.toLowerCase();
+        if (name.startsWith(value)) {
+          return product;
+        }
+      });
+      display(newStore, getElement(".products-container"));
+    } else {
+      display(store, getElement(".products-container"));
+    }
   });
 };
 
