@@ -13,6 +13,13 @@ const setupPrice = (store) => {
   priceInput.max = maxPrice;
   priceInput.min = 0;
   priceValue.textContent = `Value: $${maxPrice}`;
+
+  priceInput.addEventListener("input", function () {
+    const value = parseInt(priceInput.value);
+    priceValue.textContent = `Value: $${value}`;
+    let newStore = store.filter((product) => product.price / 100 <= value);
+    display(newStore, getElement(".products-container"));
+  });
 };
 
 export default setupPrice;
