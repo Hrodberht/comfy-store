@@ -20,3 +20,9 @@ export const addToCart = (id) => {
   console.log(id);
   openCart();
 };
+
+const init = () => {
+  console.log(cart);
+};
+
+init();
