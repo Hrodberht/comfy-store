@@ -29,6 +29,12 @@ export const addToCart = (id) => {
   } else {
     // update values
   }
+  // add one to the item count
+  displayCartItemCount();
+  // display cart totals
+  displayCartTotal();
+  // set cart in local storage
+  setStorageItem("cart", cart);
 
   openCart();
 };
