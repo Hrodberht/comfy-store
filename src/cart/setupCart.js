@@ -39,6 +39,13 @@ export const addToCart = (id) => {
   openCart();
 };
 
+function displayCartItemCount() {
+  const amount = cart.reduce((total, cartItem) => {
+    return (total += cartItem.amount);
+  }, 0);
+  cartItemCountDOM.textContent = amount;
+}
+
 const init = () => {
   console.log(cart);
 };
