@@ -29,7 +29,11 @@ export const addToCart = (id) => {
   } else {
     // update values
     const amount = increaseAmount(id);
+    const items = [...cartItemsDOM.querySelectorAll(".cart-item-amount")];
+    const newAmount = items.find((value) => value.dataset.id === id);
+    newAmount.textContent = amount;
   }
+
   // add one to the item count
   displayCartItemCount();
   // display cart totals
