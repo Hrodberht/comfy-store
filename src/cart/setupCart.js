@@ -53,11 +53,17 @@ function displayCartTotal() {
   cartTotalDOM.textContent = `Total: ${formatPrice(total)}`;
 }
 
+function setupCartFunctionality() {}
+
 const init = () => {
   // display amount of cart items
   displayCartItemCount();
   // display total
   displayCartTotal();
+  // add all cart items to the DOM
+
+  // setup cart functionality
+  setupCartFunctionality();
 };
 
 init();
