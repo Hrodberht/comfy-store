@@ -28,6 +28,7 @@ export const addToCart = (id) => {
     console.log(cart);
   } else {
     // update values
+    const amount = increaseAmount(id);
   }
   // add one to the item count
   displayCartItemCount();
@@ -57,6 +58,18 @@ function displayCartItemsDOM() {
   cart.forEach((cartItem) => {
     addToCartDOM(cartItem);
   });
+}
+
+function increaseAmount(id) {
+  let newAmount;
+  cart = cart.map((cartItem) => {
+    if (cartItem.id === id) {
+      newAmount = cartItem.amount + 1;
+      cartItem = { ...cartItem, amount: newAmount };
+    }
+    return cartItem;
+  });
+  return newAmount;
 }
 
 function setupCartFunctionality() {}
