@@ -1,4 +1,4 @@
-[![Netlify Status](https://api.netlify.com/api/v1/badges/0bbfdbf5-e6a0-4e7d-ada1-1a504ef42025/deploy-status)](https://app.netlify.com/sites/comfy-products-store/deploys)
+Live website: [![Netlify Status](https://api.netlify.com/api/v1/badges/0bbfdbf5-e6a0-4e7d-ada1-1a504ef42025/deploy-status)](https://app.netlify.com/sites/comfy-products-store/deploys)
 
 ## Comfy Store
 
